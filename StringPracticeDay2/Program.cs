@@ -10,7 +10,7 @@ namespace StringPracticeDay2
             Console.WriteLine("What is your first name?");
             
             string firstName;
-            firstName = Console.ReadLine(); // This is a METHOD it has a () with no parameters defined = is an assignment operator
+            firstName = Console.ReadLine(); // This is a METHOD it has a () with no parameters defined , = is an assignment operator
 
             Console.WriteLine("Your name is: " + firstName);
 
@@ -19,12 +19,14 @@ namespace StringPracticeDay2
             string lastName;
             lastName = Console.ReadLine();
 
+            string fullName = firstName.ToLower() + " " + lastName.ToLower(); // .ToLower to change case
+
+            Console.WriteLine("Your full name is: " + fullName);
+
             
-            Console.WriteLine("Your name is: " + firstName.ToLower() + " " + lastName.ToLower()); // .ToLower to change case
+            Console.WriteLine("How many characters does each name have?");
 
-            Console.WriteLine("Which name is longer?");
-
-            int firstNameLength = firstName.Length;
+            int firstNameLength = firstName.Length; // Length is a property
 
             int lastNameLength = lastName.Length;
 
@@ -32,10 +34,18 @@ namespace StringPracticeDay2
 
             Console.WriteLine("Last Name has " + lastNameLength + " characters");
 
+            Console.WriteLine("Which name is longer?");
 
+            if (firstNameLength > lastNameLength)
+            {
+                Console.WriteLine("Your First Name is longer than your Last Name");
+            }
 
-
-                        
+            else
+            {
+                Console.WriteLine("Your Last Name is longer than your First Name");
+            }
+                                                        
 
             
 
